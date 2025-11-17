@@ -1,0 +1,99 @@
+/* src/pages/DashboardPai.css */
+
+/* --- Estilos Gerais da Página (reaproveitando o padrão do motorista) --- */
+.dashboard-page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+.dashboard-header h1 {
+  border: none;
+  margin: 0;
+}
+.dashboard-header p {
+    margin: 5px 0 0 0;
+    color: #606770;
+}
+
+/* --- Conteúdo em Tempo Real - CORREÇÃO FINAL E DEFINITIVA --- */
+/*
+  Usamos `!important` para forçar estes estilos a serem aplicados,
+  sobrepondo qualquer regra conflitante de outros ficheiros CSS.
+*/
+.real-time-content {
+  display: grid !important;
+  grid-template-columns: 1fr !important; /* Força uma única coluna, empilhando os cartões */
+  gap: 24px !important;
+  width: 100%;
+}
+
+
+/* --- Card de Status Único (agrupando os filhos) --- */
+.child-status-card-group {
+  padding: 16px; /* Adiciona um padding interno ao card de status */
+}
+
+.group-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.child-status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0; /* Espaçamento vertical entre os filhos dentro do mesmo card */
+}
+
+/* Adiciona uma borda suave se houver mais de um filho no card */
+.child-status-item + .child-status-item {
+  border-top: 1px solid #f1f5f9;
+}
+
+
+.child-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 6px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.status-pill.status-aguardando { background-color: #fef3c7; color: #92400e; }
+.status-pill.status-embarcou { background-color: #dcfce7; color: #166534; }
+.status-pill.status-nao-embarcou { background-color: #fee2e2; color: #991b1b; }
+
+/* --- Mapa --- */
+.map-wrapper {
+  border-radius: 12px;
+  overflow: hidden; /* Garante que o mapa respeite as bordas arredondadas */
+  border: 1px solid var(--card-border-color, #e2e8f0);
+}
+
+/* --- Mensagem de "Nenhuma Rota" --- */
+.no-route-message {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  color: #64748b;
+  margin-top: 24px;
+}
+
+.no-route-message h3 {
+  margin: 15px 0 5px 0;
+}
+

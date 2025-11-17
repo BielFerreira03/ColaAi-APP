@@ -1,0 +1,82 @@
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 17, 23, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Acima do outro modal */
+  }
+  
+  .dialog-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    padding: 24px;
+    animation: slide-down 0.3s ease-out;
+    text-align: center;
+  }
+  
+  .dialog-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .dialog-header svg {
+    font-size: 3rem;
+    margin-bottom: 12px;
+  }
+  .icon-warning { color: #f59e0b; }
+  .icon-success { color: #10b981; }
+  
+  .dialog-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+  
+  .dialog-message {
+    color: #606770;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  
+  .dialog-footer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .dialog-footer button {
+    padding: 10px 24px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 100px;
+  }
+  
+  .confirm-btn {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  .cancel-btn {
+    background-color: #e4e6eb;
+    color: #1c2128;
+  }
+  
+  @keyframes slide-down {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

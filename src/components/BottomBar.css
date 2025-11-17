@@ -1,0 +1,121 @@
+/* Este CSS cuida da APARÊNCIA INTERNA da barra inferior */
+
+.bottom-bar-wrapper {
+  position: fixed; /* Faz a barra inteira ficar fixa no rodapé */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65px; /* Altura da barra de navegação */
+  z-index: 1000;
+}
+
+.dropdown-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  color: #6c757d;
+  font-size: 0.7rem;
+  padding: 5px 0;
+  
+  
+  /* Reset de estilos de botão */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit; /* Usa a mesma fonte do resto do app */
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* O menu dropdown que aparece */
+.dropdown-menu {
+  position: absolute;
+  /* Essencial: se posiciona em relação ao .bottom-bar-wrapper que é 'fixed' */
+  bottom: 75px; /* Acima da barra (65px de altura + 10px de margem) */
+  right: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  z-index: 1100;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+/* Item dentro do dropdown (o botão "Sair") */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #dc3545;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item-perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2c2c2c;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item svg {
+  font-size: 1rem;
+}
+
+
+.barra-inferior-mobile {
+    /* A visibilidade (display) desta barra é controlada pelo MotoristaLayout.css */
+    /* Aqui cuidamos dos itens internos */
+    gap: 8px; /* Espaço entre os links */
+  }
+  
+  .barra-inferior-mobile a,
+  .dropdown-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.7rem;
+    padding: 5px 0;
+    transition: color 0.2s;
+  }
+  
+  .barra-inferior-mobile a svg {
+    font-size: 1.4rem; /* Tamanho dos ícones */
+    margin-bottom: 4px;
+  }
+  
+  /* Estilo do link ATIVO, usando a mesma cor azul do projeto */
+  .barra-inferior-mobile a.active {
+    color: var(--primary-color);
+  }

@@ -1,0 +1,45 @@
+/* src/components/SortableStudentItem.css */
+.sortable-item {
+    display: flex;
+    align-items: center; /* Garantindo alinhamento vertical */
+    padding: 12px;
+    background-color: #f9fafb;
+    border: 1px solid var(--card-border-color);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: grab;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Um pouco de sombra para destacar */
+    font-size: 0.95rem;
+  }
+  
+  .sortable-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .drag-handle {
+    margin-right: 12px;
+    color: #9ca3af;
+    cursor: grab;
+    font-size: 1.2rem; /* Ícone um pouco maior */
+  }
+  
+  .student-info {
+    flex-grow: 1; /* Ocupa o espaço restante */
+  }
+  .student-info strong { 
+    display: block; 
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .student-info span { 
+    font-size: 0.8em; 
+    color: #6b7280; 
+    line-height: 1.2; /* Espaçamento de linha para o endereço */
+  }
+  
+  /* Estilo quando um item está sendo arrastado */
+  .dnd-kit-dragging .sortable-item {
+    opacity: 0.7;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }

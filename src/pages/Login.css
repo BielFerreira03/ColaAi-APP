@@ -1,0 +1,51 @@
+/* src/pages/Login.css */
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--card-border-color);
+  font-size: 1rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  opacity: 0.9;
+}
+
+.error-message {
+  color: #d93025;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+/* ===== NOVOS ESTILOS PARA O LINK DE CADASTRO ===== */
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #606770;
+}
+
+.signup-link a {
+  color: var(--primary-color, #0d6efd); /* Usa a cor primária do seu projeto */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
