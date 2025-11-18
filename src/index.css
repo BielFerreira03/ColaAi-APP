@@ -1,0 +1,20 @@
+/* src/index.css */
+:root {
+  --background-color: #f0f2f5;
+  --text-color: #1c1e21;
+  --primary-color: #F8B132;
+  --card-background: #ffffff;
+  --card-border-color: #d1d5db;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}

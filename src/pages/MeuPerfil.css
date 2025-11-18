@@ -1,0 +1,47 @@
+.meu-perfil-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== NOVO BLOCO DE ESTILOS PARA O CABEÇALHO ===== */
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 1.8rem; /* Tamanho consistente com outras páginas */
+}
+
+.page-header p {
+  margin: 5px 0 0 0;
+  color: #606770; /* Cor do subtítulo */
+}
+/* ===== FIM DO NOVO BLOCO ===== */
+
+.perfil-cards-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Uma coluna no mobile */
+  gap: 24px;
+}
+
+/* Em telas maiores, os cards ficam lado a lado */
+@media (min-width: 768px) {
+  .perfil-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.perfil-form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.perfil-form h3 {
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+

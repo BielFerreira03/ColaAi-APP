@@ -1,0 +1,282 @@
+/* --- Estilos Gerais --- */
+.executar-rota-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+.page-header h2 {
+  margin: 0;
+}
+.page-header p {
+  margin: 5px 0 0 0;
+  color: #606770;
+}
+
+/* --- Formulário para Iniciar Rota --- */
+.iniciar-rota-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  text-align: center;
+}
+.iniciar-rota-form h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.iniciar-rota-form select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background-color: #f9fafb;
+  font-size: 1rem;
+}
+.iniciar-rota-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* --- Painel de Rota Ativa --- */
+.active-route-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Painel de Foco na Próxima Parada --- */
+.next-stop-focus {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: mapa em cima, card em baixo */
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .next-stop-focus {
+    grid-template-columns: 1fr 1fr; /* Lado a lado em telas maiores */
+  }
+}
+
+/* --- AJUSTES PARA MELHORAR A VISUALIZAÇÃO MOBILE --- */
+.map-container-small {
+  height: 300px; /* Altura reduzida para mobile */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.map-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Altura consistente com o mapa */
+  background-color: #f3f4f6;
+  color: #6b7280;
+  font-size: 1.2rem;
+  border-radius: 12px;
+}
+
+.next-stop-card {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-stop-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--primary-color, #0d6efd);
+  margin-bottom: 15px;
+}
+.next-stop-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.next-student-name {
+  font-size: 1.8rem; /* Fonte reduzida para mobile */
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+/* Em telas maiores, os tamanhos voltam ao normal */
+@media (min-width: 768px) {
+    .map-container-small, .map-placeholder {
+        height: 350px;
+    }
+    .next-student-name {
+        font-size: 2rem;
+    }
+}
+
+
+.next-stop-card .parada-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.next-stop-card .parada-card-actions button {
+  flex: 1;
+  padding: 12px; /* Padding reduzido para mobile */
+  font-size: 1rem;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Em telas maiores, o padding volta ao normal */
+@media (min-width: 768px) {
+    .next-stop-card .parada-card-actions button {
+        padding: 15px;
+    }
+}
+
+
+.next-stop-card .parada-card-actions button:hover {
+  opacity: 0.9;
+}
+.next-stop-card .coletado-btn {
+  background-color: #22c55e;
+}
+.next-stop-card .faltou-btn {
+  background-color: #ef4444;
+}
+
+.next-stop-card.all-done .next-stop-header {
+  color: #16a34a;
+}
+.next-stop-card.all-done p {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+/* --- Lista Completa de Paradas --- */
+.full-paradas-list {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #f1f5f9;
+}
+.full-paradas-list h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.parada-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+.parada-item:last-child {
+  border-bottom: none;
+}
+.parada-item .stop-number {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  font-weight: bold;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+.parada-item .student-name {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.parada-item .status-icon {
+  font-size: 1.2rem;
+}
+.parada-item.status-coletado {
+  color: #16a34a;
+}
+.parada-item.status-coletado .student-name {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+.parada-item.status-faltou {
+  color: #ef4444;
+}
+.parada-item.status-faltou .student-name {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.finish-route-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #606770;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+.finish-route-button:hover {
+  opacity: 0.9;
+}
+
+/* Esconde as instruções de texto do Leaflet */
+.leaflet-routing-container {
+  display: none !important;
+}
+
+.gps-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6; /* Um azul chamativo */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px; /* Adiciona um espaço acima */
+  margin-bottom: 20px; /* Adiciona um espaço abaixo */
+  transition: background-color 0.2s;
+}
+
+.gps-button:hover {
+  background-color: #2563eb;
+}
